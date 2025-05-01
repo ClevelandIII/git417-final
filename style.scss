@@ -1,0 +1,821 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Root */
+:root {
+    --ghibli-blue: #00aff0;
+    --ghibli-blue-dark: #007098;
+    --black: #0b0b0b;
+    --white: #f1f1f1;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+
+@font-face {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Main Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1vw;
+    font-weight: 350;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1vw;
+    font-weight: 350;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1vw;
+    font-weight: 350;
+}
+
+h4 {
+    font-size: 1.125rem;
+    margin-bottom: 1vw;
+    font-weight: 350;
+}
+
+header {
+    #head {
+        background-color: var(--ghibli-blue);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1vw;
+        justify-items: center;
+        padding: 1.5vw 0;
+        color: var(--black);
+
+        img {
+            max-width: 12%;
+        }
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--black);
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        width: 50%;
+
+        li {
+            a {
+                color: var(--white);
+                text-align: center;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #theme-toggle {
+        border-radius: 3rem;
+        cursor: pointer;
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: 5vw;
+        background-color: var(--white);
+        text-align: center;
+    }
+}
+
+main {
+    padding: 3vw 6vw;
+    background-color: #007098;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3CradialGradient id='a' cx='500' cy='500' r='50.6%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23007098'/%3E%3Cstop offset='1' stop-color='%23007098'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23007098' stop-opacity='1'/%3E%3Cstop offset='1' stop-color='%23007098' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1000' height='1000'/%3E%3Cg fill='none' stroke='%2300AFF0' stroke-width='8.2' stroke-miterlimit='10' stroke-opacity='0.08'%3E%3Cpolygon points='-500%2C500 500%2C-500 1500%2C500 500%2C1500'/%3E%3Cpolygon points='-475%2C500 500%2C-475 1475%2C500 500%2C1475'/%3E%3Cpolygon points='-450%2C500 500%2C-450 1450%2C500 500%2C1450'/%3E%3Cpolygon points='-425%2C500 500%2C-425 1425%2C500 500%2C1425'/%3E%3Cpolygon points='-400%2C500 500%2C-400 1400%2C500 500%2C1400'/%3E%3Cpolygon points='-375%2C500 500%2C-375 1375%2C500 500%2C1375'/%3E%3Cpolygon points='-350%2C500 500%2C-350 1350%2C500 500%2C1350'/%3E%3Cpolygon points='-325%2C500 500%2C-325 1325%2C500 500%2C1325'/%3E%3Cpolygon points='-300%2C500 500%2C-300 1300%2C500 500%2C1300'/%3E%3Cpolygon points='-275%2C500 500%2C-275 1275%2C500 500%2C1275'/%3E%3Cpolygon points='-250%2C500 500%2C-250 1250%2C500 500%2C1250'/%3E%3Cpolygon points='-225%2C500 500%2C-225 1225%2C500 500%2C1225'/%3E%3Cpolygon points='-200%2C500 500%2C-200 1200%2C500 500%2C1200'/%3E%3Cpolygon points='-175%2C500 500%2C-175 1175%2C500 500%2C1175'/%3E%3Cpolygon points='-150%2C500 500%2C-150 1150%2C500 500%2C1150'/%3E%3Cpolygon points='-125%2C500 500%2C-125 1125%2C500 500%2C1125'/%3E%3Cpolygon points='-100%2C500 500%2C-100 1100%2C500 500%2C1100'/%3E%3Cpolygon points='-75%2C500 500%2C-75 1075%2C500 500%2C1075'/%3E%3Cpolygon points='-50%2C500 500%2C-50 1050%2C500 500%2C1050'/%3E%3Cpolygon points='-25%2C500 500%2C-25 1025%2C500 500%2C1025'/%3E%3Cpolygon points='0%2C500 500%2C0 1000%2C500 500%2C1000'/%3E%3Cpolygon points='25%2C500 500%2C25 975%2C500 500%2C975'/%3E%3Cpolygon points='50%2C500 500%2C50 950%2C500 500%2C950'/%3E%3Cpolygon points='75%2C500 500%2C75 925%2C500 500%2C925'/%3E%3Cpolygon points='100%2C500 500%2C100 900%2C500 500%2C900'/%3E%3Cpolygon points='125%2C500 500%2C125 875%2C500 500%2C875'/%3E%3Cpolygon points='150%2C500 500%2C150 850%2C500 500%2C850'/%3E%3Cpolygon points='175%2C500 500%2C175 825%2C500 500%2C825'/%3E%3Cpolygon points='200%2C500 500%2C200 800%2C500 500%2C800'/%3E%3Cpolygon points='225%2C500 500%2C225 775%2C500 500%2C775'/%3E%3Cpolygon points='250%2C500 500%2C250 750%2C500 500%2C750'/%3E%3Cpolygon points='275%2C500 500%2C275 725%2C500 500%2C725'/%3E%3Cpolygon points='300%2C500 500%2C300 700%2C500 500%2C700'/%3E%3Cpolygon points='325%2C500 500%2C325 675%2C500 500%2C675'/%3E%3Cpolygon points='350%2C500 500%2C350 650%2C500 500%2C650'/%3E%3Cpolygon points='375%2C500 500%2C375 625%2C500 500%2C625'/%3E%3Cpolygon points='400%2C500 500%2C400 600%2C500 500%2C600'/%3E%3Cpolygon points='425%2C500 500%2C425 575%2C500 500%2C575'/%3E%3Cpolygon points='450%2C500 500%2C450 550%2C500 500%2C550'/%3E%3Cpolygon points='475%2C500 500%2C475 525%2C500 500%2C525'/%3E%3C/g%3E%3Crect fill-opacity='0.08' fill='url(%23b)' width='1000' height='1000'/%3E %3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    section {
+        background-color: var(--ghibli-blue);
+        margin-bottom: 1vw;
+        padding: 2vw;
+    }
+
+    #intro {
+        text-align: left;
+
+        #introStart {
+            margin-bottom: 2vw;
+            width: 80%;
+            margin: 0 auto;
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                line-height: 1.1;
+                margin-bottom: 1vw;
+            }
+
+            #introDesc {
+                display: grid;
+                grid-template-columns: 2fr 8fr 2fr;
+                justify-items: center;
+                align-items: center;
+                margin: 0 auto;
+
+                p {
+                    padding-left: 0;
+                }
+
+                img {
+                    width: 10vw;
+                }
+            }
+        }
+
+        #creators {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+
+            h4 {
+                margin-bottom: 2vw;
+            }
+
+            img {
+                width: 15vw;
+                border-radius: 50%;
+                border: 5px solid var(--black);
+            }
+
+            .profiles {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                div {
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+
+    #showcase {
+        display: grid;
+        justify-items: center;
+        padding-bottom: 0;
+
+        img {
+            margin-bottom: 2vw;
+            border: 5px solid var(--black);
+        }
+
+        p {
+            margin-bottom: 2vw;
+        }
+
+        #movieDesc {
+            width: 40%;
+            margin: 0 auto;
+            margin-bottom: 2vw;
+            text-align: center;
+        }
+
+        #films {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            button {
+                background-color: var(--ghibli-blue-dark);
+                color: var(--white);
+                padding: 0.5vw;
+                width: 82%;
+                margin-bottom: 2vw;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #randomNumber {
+        #text {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 2vw;
+            h2 {
+                text-align: center;
+            }
+            p {
+                width: 55%;
+                margin: 0 auto;
+            }
+        }
+        #formRandomNumber {
+            width: 35%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 10fr 2fr;
+            align-items: center;
+
+            input[type="submit"] {
+                background-color: var(--ghibli-blue-dark);
+                color: var(--white);
+                padding: 0.5vw;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+        #randomNumberResult {
+            margin-top: 1vw;
+            text-align: center;
+        }
+    }
+
+    #shop {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        #cart {
+            justify-items: center;
+            border: 5px solid var(--black);
+            padding: 2vw;
+            height: 21%;
+
+            h2 {
+                border-bottom: 5px solid var(--black);
+            }
+
+            #totals {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                div {
+                    display: grid;
+                    grid-template-columns: 3fr 1fr;
+                    margin-bottom: 1vw;
+                }
+
+                #currentTotal::before,
+                #overallTotal::before {
+                    content: "$";
+                }
+            }
+
+            input[type="submit"] {
+                background-color: var(--black);
+                color: var(--white);
+                padding: 0.5vw;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+
+        #products {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .individualProducts {
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+                margin-bottom: 2vw;
+                .productImages {
+                    width: 15vw;
+                    margin-bottom: 1vw;
+                    border: 5px solid var(--black);
+                }
+
+                h3 {
+                    font-size: 1.15rem;
+                    margin-bottom: 0.5vw;
+                    border-bottom: 5px solid var(--black);
+                }
+
+                .cartLabels {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    justify-items: start;
+                    column-gap: 2vw;
+
+                    div {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: var(--black);
+    text-align: center;
+    padding: 3vw;
+    padding-bottom: 1vw;
+
+    h2 {
+        margin-top: 1vw;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+        padding: 2vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1vw;
+
+        .textboxes {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            div {
+                display: grid;
+                grid-template-columns: 2fr 10fr;
+                justify-items: center;
+                align-items: center;
+                margin-bottom: 1vw;
+
+                input {
+                    width: 90%;
+                }
+            }
+
+            #textarea {
+                margin-bottom: 1vw;
+            }
+        }
+
+        fieldset {
+            border: 2px solid var(--white);
+            padding: 2vw;
+            text-align: left;
+            div {
+                display: grid;
+                grid-template-columns: 1fr 11fr;
+                row-gap: 1vw;
+            }
+        }
+
+        input[type="submit"] {
+            background-color: var(--ghibli-blue-dark);
+            color: var(--white);
+            margin: 0 auto;
+            margin-top: 2vw;
+            width: 20%;
+        }
+    }
+}
+
+// Light-Dark mode toggles
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--ghibli-blue-dark);
+        color: var(--white);
+
+        header {
+            #head {
+                background-color: var(--ghibli-blue-dark);
+            }
+        }
+
+        nav {
+            background-color: var(--black);
+            ul {
+                li {
+                    color: var(--white);
+                }
+            }
+
+            #theme-toggle {
+                background-color: var(--white);
+            }
+        }
+
+        main {
+            //"https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" Free SVG Backgrounds and Patterns by SVGBackgrounds.com
+            background-color: #007098;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3CradialGradient id='a' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23007098'/%3E%3Cstop offset='1' stop-color='%230B0B0B'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230B0B0B' stop-opacity='1'/%3E%3Cstop offset='1' stop-color='%230B0B0B' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1000' height='1000'/%3E%3Cg fill='none' stroke='%230B0B0B' stroke-width='7.5' stroke-miterlimit='10' stroke-opacity='0.17'%3E%3Cpolygon points='-500%2C500 500%2C-500 1500%2C500 500%2C1500'/%3E%3Cpolygon points='-475%2C500 500%2C-475 1475%2C500 500%2C1475'/%3E%3Cpolygon points='-450%2C500 500%2C-450 1450%2C500 500%2C1450'/%3E%3Cpolygon points='-425%2C500 500%2C-425 1425%2C500 500%2C1425'/%3E%3Cpolygon points='-400%2C500 500%2C-400 1400%2C500 500%2C1400'/%3E%3Cpolygon points='-375%2C500 500%2C-375 1375%2C500 500%2C1375'/%3E%3Cpolygon points='-350%2C500 500%2C-350 1350%2C500 500%2C1350'/%3E%3Cpolygon points='-325%2C500 500%2C-325 1325%2C500 500%2C1325'/%3E%3Cpolygon points='-300%2C500 500%2C-300 1300%2C500 500%2C1300'/%3E%3Cpolygon points='-275%2C500 500%2C-275 1275%2C500 500%2C1275'/%3E%3Cpolygon points='-250%2C500 500%2C-250 1250%2C500 500%2C1250'/%3E%3Cpolygon points='-225%2C500 500%2C-225 1225%2C500 500%2C1225'/%3E%3Cpolygon points='-200%2C500 500%2C-200 1200%2C500 500%2C1200'/%3E%3Cpolygon points='-175%2C500 500%2C-175 1175%2C500 500%2C1175'/%3E%3Cpolygon points='-150%2C500 500%2C-150 1150%2C500 500%2C1150'/%3E%3Cpolygon points='-125%2C500 500%2C-125 1125%2C500 500%2C1125'/%3E%3Cpolygon points='-100%2C500 500%2C-100 1100%2C500 500%2C1100'/%3E%3Cpolygon points='-75%2C500 500%2C-75 1075%2C500 500%2C1075'/%3E%3Cpolygon points='-50%2C500 500%2C-50 1050%2C500 500%2C1050'/%3E%3Cpolygon points='-25%2C500 500%2C-25 1025%2C500 500%2C1025'/%3E%3Cpolygon points='0%2C500 500%2C0 1000%2C500 500%2C1000'/%3E%3Cpolygon points='25%2C500 500%2C25 975%2C500 500%2C975'/%3E%3Cpolygon points='50%2C500 500%2C50 950%2C500 500%2C950'/%3E%3Cpolygon points='75%2C500 500%2C75 925%2C500 500%2C925'/%3E%3Cpolygon points='100%2C500 500%2C100 900%2C500 500%2C900'/%3E%3Cpolygon points='125%2C500 500%2C125 875%2C500 500%2C875'/%3E%3Cpolygon points='150%2C500 500%2C150 850%2C500 500%2C850'/%3E%3Cpolygon points='175%2C500 500%2C175 825%2C500 500%2C825'/%3E%3Cpolygon points='200%2C500 500%2C200 800%2C500 500%2C800'/%3E%3Cpolygon points='225%2C500 500%2C225 775%2C500 500%2C775'/%3E%3Cpolygon points='250%2C500 500%2C250 750%2C500 500%2C750'/%3E%3Cpolygon points='275%2C500 500%2C275 725%2C500 500%2C725'/%3E%3Cpolygon points='300%2C500 500%2C300 700%2C500 500%2C700'/%3E%3Cpolygon points='325%2C500 500%2C325 675%2C500 500%2C675'/%3E%3Cpolygon points='350%2C500 500%2C350 650%2C500 500%2C650'/%3E%3Cpolygon points='375%2C500 500%2C375 625%2C500 500%2C625'/%3E%3Cpolygon points='400%2C500 500%2C400 600%2C500 500%2C600'/%3E%3Cpolygon points='425%2C500 500%2C425 575%2C500 500%2C575'/%3E%3Cpolygon points='450%2C500 500%2C450 550%2C500 500%2C550'/%3E%3Cpolygon points='475%2C500 500%2C475 525%2C500 500%2C525'/%3E%3C/g%3E%3Crect fill-opacity='0.17' fill='url(%23b)' width='1000' height='1000'/%3E %3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+
+            section {
+                background-color: var(--ghibli-blue-dark);
+            }
+
+            #showcase {
+                #films {
+                    button {
+                        background-color: var(--black);
+                        color: var(--white);
+                    }
+                }
+            }
+
+            #randomNumber {
+                #formRandomNumber {
+                    input[type="submit"] {
+                        background-color: var(--black);
+                        color: var(--white);
+                    }
+                }
+            }
+
+            #shop {
+                #cart {
+                    input[type="submit"] {
+                        background-color: var(--black);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+
+        footer {
+            color: var(--white);
+            background-color: var(--black);
+
+            form {
+                input[type="submit"] {
+                    background-color: var(--ghibli-blue-dark);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--white);
+        color: var(--black);
+
+        header {
+            #head {
+                background-color: var(--ghibli-blue);
+            }
+        }
+
+        nav {
+            background-color: var(--ghibli-blue-dark);
+            ul {
+                li {
+                    color: var(--white);
+                }
+            }
+
+            #theme-toggle {
+                background-color: var(--black);
+            }
+        }
+
+        main {
+            //"https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" Free SVG Backgrounds and Patterns by SVGBackgrounds.com
+            background-color: #00aff0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3CradialGradient id='a' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300AFF0'/%3E%3Cstop offset='1' stop-color='%23F1F1F1'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F1F1F1' stop-opacity='1'/%3E%3Cstop offset='1' stop-color='%23F1F1F1' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1000' height='1000'/%3E%3Cg fill='none' stroke='%23F1F1F1' stroke-width='7.5' stroke-miterlimit='10' stroke-opacity='0.17'%3E%3Cpolygon points='-500%2C500 500%2C-500 1500%2C500 500%2C1500'/%3E%3Cpolygon points='-475%2C500 500%2C-475 1475%2C500 500%2C1475'/%3E%3Cpolygon points='-450%2C500 500%2C-450 1450%2C500 500%2C1450'/%3E%3Cpolygon points='-425%2C500 500%2C-425 1425%2C500 500%2C1425'/%3E%3Cpolygon points='-400%2C500 500%2C-400 1400%2C500 500%2C1400'/%3E%3Cpolygon points='-375%2C500 500%2C-375 1375%2C500 500%2C1375'/%3E%3Cpolygon points='-350%2C500 500%2C-350 1350%2C500 500%2C1350'/%3E%3Cpolygon points='-325%2C500 500%2C-325 1325%2C500 500%2C1325'/%3E%3Cpolygon points='-300%2C500 500%2C-300 1300%2C500 500%2C1300'/%3E%3Cpolygon points='-275%2C500 500%2C-275 1275%2C500 500%2C1275'/%3E%3Cpolygon points='-250%2C500 500%2C-250 1250%2C500 500%2C1250'/%3E%3Cpolygon points='-225%2C500 500%2C-225 1225%2C500 500%2C1225'/%3E%3Cpolygon points='-200%2C500 500%2C-200 1200%2C500 500%2C1200'/%3E%3Cpolygon points='-175%2C500 500%2C-175 1175%2C500 500%2C1175'/%3E%3Cpolygon points='-150%2C500 500%2C-150 1150%2C500 500%2C1150'/%3E%3Cpolygon points='-125%2C500 500%2C-125 1125%2C500 500%2C1125'/%3E%3Cpolygon points='-100%2C500 500%2C-100 1100%2C500 500%2C1100'/%3E%3Cpolygon points='-75%2C500 500%2C-75 1075%2C500 500%2C1075'/%3E%3Cpolygon points='-50%2C500 500%2C-50 1050%2C500 500%2C1050'/%3E%3Cpolygon points='-25%2C500 500%2C-25 1025%2C500 500%2C1025'/%3E%3Cpolygon points='0%2C500 500%2C0 1000%2C500 500%2C1000'/%3E%3Cpolygon points='25%2C500 500%2C25 975%2C500 500%2C975'/%3E%3Cpolygon points='50%2C500 500%2C50 950%2C500 500%2C950'/%3E%3Cpolygon points='75%2C500 500%2C75 925%2C500 500%2C925'/%3E%3Cpolygon points='100%2C500 500%2C100 900%2C500 500%2C900'/%3E%3Cpolygon points='125%2C500 500%2C125 875%2C500 500%2C875'/%3E%3Cpolygon points='150%2C500 500%2C150 850%2C500 500%2C850'/%3E%3Cpolygon points='175%2C500 500%2C175 825%2C500 500%2C825'/%3E%3Cpolygon points='200%2C500 500%2C200 800%2C500 500%2C800'/%3E%3Cpolygon points='225%2C500 500%2C225 775%2C500 500%2C775'/%3E%3Cpolygon points='250%2C500 500%2C250 750%2C500 500%2C750'/%3E%3Cpolygon points='275%2C500 500%2C275 725%2C500 500%2C725'/%3E%3Cpolygon points='300%2C500 500%2C300 700%2C500 500%2C700'/%3E%3Cpolygon points='325%2C500 500%2C325 675%2C500 500%2C675'/%3E%3Cpolygon points='350%2C500 500%2C350 650%2C500 500%2C650'/%3E%3Cpolygon points='375%2C500 500%2C375 625%2C500 500%2C625'/%3E%3Cpolygon points='400%2C500 500%2C400 600%2C500 500%2C600'/%3E%3Cpolygon points='425%2C500 500%2C425 575%2C500 500%2C575'/%3E%3Cpolygon points='450%2C500 500%2C450 550%2C500 500%2C550'/%3E%3Cpolygon points='475%2C500 500%2C475 525%2C500 500%2C525'/%3E%3C/g%3E%3Crect fill-opacity='0.17' fill='url(%23b)' width='1000' height='1000'/%3E %3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+
+            section {
+                background-color: var(--ghibli-blue);
+            }
+
+            #showcase {
+                #films {
+                    button {
+                        background-color: var(--ghibli-blue-dark);
+                        color: var(--white);
+                    }
+                }
+            }
+
+            #randomNumber {
+                #formRandomNumber {
+                    input[type="submit"] {
+                        background-color: var(--ghibli-blue-dark);
+                        color: var(--white);
+                    }
+                }
+            }
+
+            #shop {
+                #cart {
+                    input[type="submit"] {
+                        background-color: var(--ghibli-blue-dark);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+
+        footer {
+            background-color: var(--ghibli-blue-dark);
+            color: var(--white);
+
+            form {
+                input[type="submit"] {
+                    background-color: var(--ghibli-blue);
+                    color: var(--black);
+                }
+            }
+        }
+    }
+}
+
+body.dark-mode {
+    background-color: var(--ghibli-blue-dark);
+    color: var(--white);
+
+    header {
+        #head {
+            background-color: var(--ghibli-blue-dark);
+        }
+    }
+
+    nav {
+        background-color: var(--black);
+        ul {
+            li {
+                color: var(--white);
+            }
+        }
+
+        #theme-toggle {
+            background-color: var(--white);
+        }
+    }
+
+    main {
+        //"https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" Free SVG Backgrounds and Patterns by SVGBackgrounds.com
+        background-color: #007098;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3CradialGradient id='a' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23007098'/%3E%3Cstop offset='1' stop-color='%230B0B0B'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230B0B0B' stop-opacity='1'/%3E%3Cstop offset='1' stop-color='%230B0B0B' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1000' height='1000'/%3E%3Cg fill='none' stroke='%230B0B0B' stroke-width='7.5' stroke-miterlimit='10' stroke-opacity='0.17'%3E%3Cpolygon points='-500%2C500 500%2C-500 1500%2C500 500%2C1500'/%3E%3Cpolygon points='-475%2C500 500%2C-475 1475%2C500 500%2C1475'/%3E%3Cpolygon points='-450%2C500 500%2C-450 1450%2C500 500%2C1450'/%3E%3Cpolygon points='-425%2C500 500%2C-425 1425%2C500 500%2C1425'/%3E%3Cpolygon points='-400%2C500 500%2C-400 1400%2C500 500%2C1400'/%3E%3Cpolygon points='-375%2C500 500%2C-375 1375%2C500 500%2C1375'/%3E%3Cpolygon points='-350%2C500 500%2C-350 1350%2C500 500%2C1350'/%3E%3Cpolygon points='-325%2C500 500%2C-325 1325%2C500 500%2C1325'/%3E%3Cpolygon points='-300%2C500 500%2C-300 1300%2C500 500%2C1300'/%3E%3Cpolygon points='-275%2C500 500%2C-275 1275%2C500 500%2C1275'/%3E%3Cpolygon points='-250%2C500 500%2C-250 1250%2C500 500%2C1250'/%3E%3Cpolygon points='-225%2C500 500%2C-225 1225%2C500 500%2C1225'/%3E%3Cpolygon points='-200%2C500 500%2C-200 1200%2C500 500%2C1200'/%3E%3Cpolygon points='-175%2C500 500%2C-175 1175%2C500 500%2C1175'/%3E%3Cpolygon points='-150%2C500 500%2C-150 1150%2C500 500%2C1150'/%3E%3Cpolygon points='-125%2C500 500%2C-125 1125%2C500 500%2C1125'/%3E%3Cpolygon points='-100%2C500 500%2C-100 1100%2C500 500%2C1100'/%3E%3Cpolygon points='-75%2C500 500%2C-75 1075%2C500 500%2C1075'/%3E%3Cpolygon points='-50%2C500 500%2C-50 1050%2C500 500%2C1050'/%3E%3Cpolygon points='-25%2C500 500%2C-25 1025%2C500 500%2C1025'/%3E%3Cpolygon points='0%2C500 500%2C0 1000%2C500 500%2C1000'/%3E%3Cpolygon points='25%2C500 500%2C25 975%2C500 500%2C975'/%3E%3Cpolygon points='50%2C500 500%2C50 950%2C500 500%2C950'/%3E%3Cpolygon points='75%2C500 500%2C75 925%2C500 500%2C925'/%3E%3Cpolygon points='100%2C500 500%2C100 900%2C500 500%2C900'/%3E%3Cpolygon points='125%2C500 500%2C125 875%2C500 500%2C875'/%3E%3Cpolygon points='150%2C500 500%2C150 850%2C500 500%2C850'/%3E%3Cpolygon points='175%2C500 500%2C175 825%2C500 500%2C825'/%3E%3Cpolygon points='200%2C500 500%2C200 800%2C500 500%2C800'/%3E%3Cpolygon points='225%2C500 500%2C225 775%2C500 500%2C775'/%3E%3Cpolygon points='250%2C500 500%2C250 750%2C500 500%2C750'/%3E%3Cpolygon points='275%2C500 500%2C275 725%2C500 500%2C725'/%3E%3Cpolygon points='300%2C500 500%2C300 700%2C500 500%2C700'/%3E%3Cpolygon points='325%2C500 500%2C325 675%2C500 500%2C675'/%3E%3Cpolygon points='350%2C500 500%2C350 650%2C500 500%2C650'/%3E%3Cpolygon points='375%2C500 500%2C375 625%2C500 500%2C625'/%3E%3Cpolygon points='400%2C500 500%2C400 600%2C500 500%2C600'/%3E%3Cpolygon points='425%2C500 500%2C425 575%2C500 500%2C575'/%3E%3Cpolygon points='450%2C500 500%2C450 550%2C500 500%2C550'/%3E%3Cpolygon points='475%2C500 500%2C475 525%2C500 500%2C525'/%3E%3C/g%3E%3Crect fill-opacity='0.17' fill='url(%23b)' width='1000' height='1000'/%3E %3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+
+        section {
+            background-color: var(--ghibli-blue-dark);
+        }
+
+        #showcase {
+            #films {
+                button {
+                    background-color: var(--black);
+                    color: var(--white);
+                }
+            }
+        }
+
+        #randomNumber {
+            #formRandomNumber {
+                input[type="submit"] {
+                    background-color: var(--black);
+                    color: var(--white);
+                }
+            }
+        }
+
+        #shop {
+            #cart {
+                input[type="submit"] {
+                    background-color: var(--black);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    footer {
+        color: var(--white);
+        background-color: var(--black);
+
+        form {
+            input[type="submit"] {
+                background-color: var(--ghibli-blue-dark);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+body.light-mode {
+    background-color: var(--white);
+    color: var(--black);
+
+    header {
+        #head {
+            background-color: var(--ghibli-blue);
+        }
+    }
+
+    nav {
+        background-color: var(--ghibli-blue-dark);
+        ul {
+            li {
+                color: var(--white);
+            }
+        }
+
+        #theme-toggle {
+            background-color: var(--black);
+        }
+    }
+
+    main {
+        //"https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" Free SVG Backgrounds and Patterns by SVGBackgrounds.com
+        background-color: #00aff0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3CradialGradient id='a' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300AFF0'/%3E%3Cstop offset='1' stop-color='%23F1F1F1'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='500' cy='500' r='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F1F1F1' stop-opacity='1'/%3E%3Cstop offset='1' stop-color='%23F1F1F1' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1000' height='1000'/%3E%3Cg fill='none' stroke='%23F1F1F1' stroke-width='7.5' stroke-miterlimit='10' stroke-opacity='0.17'%3E%3Cpolygon points='-500%2C500 500%2C-500 1500%2C500 500%2C1500'/%3E%3Cpolygon points='-475%2C500 500%2C-475 1475%2C500 500%2C1475'/%3E%3Cpolygon points='-450%2C500 500%2C-450 1450%2C500 500%2C1450'/%3E%3Cpolygon points='-425%2C500 500%2C-425 1425%2C500 500%2C1425'/%3E%3Cpolygon points='-400%2C500 500%2C-400 1400%2C500 500%2C1400'/%3E%3Cpolygon points='-375%2C500 500%2C-375 1375%2C500 500%2C1375'/%3E%3Cpolygon points='-350%2C500 500%2C-350 1350%2C500 500%2C1350'/%3E%3Cpolygon points='-325%2C500 500%2C-325 1325%2C500 500%2C1325'/%3E%3Cpolygon points='-300%2C500 500%2C-300 1300%2C500 500%2C1300'/%3E%3Cpolygon points='-275%2C500 500%2C-275 1275%2C500 500%2C1275'/%3E%3Cpolygon points='-250%2C500 500%2C-250 1250%2C500 500%2C1250'/%3E%3Cpolygon points='-225%2C500 500%2C-225 1225%2C500 500%2C1225'/%3E%3Cpolygon points='-200%2C500 500%2C-200 1200%2C500 500%2C1200'/%3E%3Cpolygon points='-175%2C500 500%2C-175 1175%2C500 500%2C1175'/%3E%3Cpolygon points='-150%2C500 500%2C-150 1150%2C500 500%2C1150'/%3E%3Cpolygon points='-125%2C500 500%2C-125 1125%2C500 500%2C1125'/%3E%3Cpolygon points='-100%2C500 500%2C-100 1100%2C500 500%2C1100'/%3E%3Cpolygon points='-75%2C500 500%2C-75 1075%2C500 500%2C1075'/%3E%3Cpolygon points='-50%2C500 500%2C-50 1050%2C500 500%2C1050'/%3E%3Cpolygon points='-25%2C500 500%2C-25 1025%2C500 500%2C1025'/%3E%3Cpolygon points='0%2C500 500%2C0 1000%2C500 500%2C1000'/%3E%3Cpolygon points='25%2C500 500%2C25 975%2C500 500%2C975'/%3E%3Cpolygon points='50%2C500 500%2C50 950%2C500 500%2C950'/%3E%3Cpolygon points='75%2C500 500%2C75 925%2C500 500%2C925'/%3E%3Cpolygon points='100%2C500 500%2C100 900%2C500 500%2C900'/%3E%3Cpolygon points='125%2C500 500%2C125 875%2C500 500%2C875'/%3E%3Cpolygon points='150%2C500 500%2C150 850%2C500 500%2C850'/%3E%3Cpolygon points='175%2C500 500%2C175 825%2C500 500%2C825'/%3E%3Cpolygon points='200%2C500 500%2C200 800%2C500 500%2C800'/%3E%3Cpolygon points='225%2C500 500%2C225 775%2C500 500%2C775'/%3E%3Cpolygon points='250%2C500 500%2C250 750%2C500 500%2C750'/%3E%3Cpolygon points='275%2C500 500%2C275 725%2C500 500%2C725'/%3E%3Cpolygon points='300%2C500 500%2C300 700%2C500 500%2C700'/%3E%3Cpolygon points='325%2C500 500%2C325 675%2C500 500%2C675'/%3E%3Cpolygon points='350%2C500 500%2C350 650%2C500 500%2C650'/%3E%3Cpolygon points='375%2C500 500%2C375 625%2C500 500%2C625'/%3E%3Cpolygon points='400%2C500 500%2C400 600%2C500 500%2C600'/%3E%3Cpolygon points='425%2C500 500%2C425 575%2C500 500%2C575'/%3E%3Cpolygon points='450%2C500 500%2C450 550%2C500 500%2C550'/%3E%3Cpolygon points='475%2C500 500%2C475 525%2C500 500%2C525'/%3E%3C/g%3E%3Crect fill-opacity='0.17' fill='url(%23b)' width='1000' height='1000'/%3E %3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+
+        section {
+            background-color: var(--ghibli-blue);
+        }
+
+        #showcase {
+            #films {
+                button {
+                    background-color: var(--ghibli-blue-dark);
+                    color: var(--white);
+                }
+            }
+        }
+
+        #randomNumber {
+            #formRandomNumber {
+                input[type="submit"] {
+                    background-color: var(--ghibli-blue-dark);
+                    color: var(--white);
+                }
+            }
+        }
+
+        #shop {
+            #cart {
+                input[type="submit"] {
+                    background-color: var(--ghibli-blue-dark);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--ghibli-blue-dark);
+        color: var(--white);
+
+        form {
+            input[type="submit"] {
+                background-color: var(--ghibli-blue);
+                color: var(--black);
+            }
+        }
+    }
+}

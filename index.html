@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Studio Ghibli</title>
+        <meta name="author" content="Cleveland H. Williams III" />
+        <meta name="description" content="web name" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="ofuscated.js" defer></script>
+    </head>
+
+    <body>
+        <header id="header">
+            <div id="head">
+                <img src="images/SG-Logo-Big.png" alt="Studio Ghibli's logo" />
+                <p id="quote">
+                    "Random quote from a pool of Studio Ghibli quotes."
+                </p>
+            </div>
+        </header>
+        <nav>
+            <img src="images/SG-Logo_Small-2.png" alt="Studio Ghibli Logo" />
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#showcase">Catalogue</a></li>
+                <li><a href="#randomNumber">Game</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a id="theme-toggle" aria-label="Toggle light/dark mode">
+                <svg
+                    width="35px"
+                    height="35px"
+                    version="1.1"
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <defs>
+                        <clipPath id="a">
+                            <path d="m18.512 18.512h62.977v62.977h-62.977z" />
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#a)">
+                        <path
+                            d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531"
+                            fill="#333"
+                            fill-rule="evenodd"
+                        />
+                    </g>
+                </svg>
+            </a>
+        </nav>
+        <main id="main">
+            <section id="intro">
+                <div id="introStart">
+                    <h2>Who are we?</h2>
+
+                    <div id="introDesc">
+                        <img src="images/mini-totoro.png" alt="" />
+
+                        <div>
+                            <p>We are Studio Ghibli!</p>
+                            <p>
+                                We are a 2D animation studio based in Japan, and
+                                we specialize in handdrawn 2D films, all with
+                                our own unique style. We got our start with
+                                Laputa: Castle in the Sky, but now we have
+                                several massive films, some of them (like
+                                Spirited Away or My Neighbor Totoro) reaching
+                                global acclaim.
+                            </p>
+                        </div>
+
+                        <img src="images/mini-totoro.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- <div>
+                    <h3>Meet some of our staff!</h3>
+
+                    <div id="creators">
+                        <div class="profiles">
+                            <div><img src="images/Takahata.png" alt="" /></div>
+                            <div>
+                                <h4>Isao Takahara</h4>
+                                <p>Creator 1</p>
+                            </div>
+                        </div>
+
+                        <div class="profiles">
+                            <div>
+                                <h4>Hayao Miyazaki</h4>
+                                <p>Creator 2</p>
+                            </div>
+                            <div><img src="images/Miyazaki.webp" alt="" /></div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+            <section id="showcase">
+                <h2>Some of our best preforming movies!</h2>
+
+                <img
+                    src="images/Movies/Kiki.webp"
+                    alt="Images of Studio Ghibli films"
+                    id="movieImg"
+                />
+
+                <p id="movieDesc"></p>
+
+                <div id="films"></div>
+            </section>
+            <section id="randomNumber">
+                <div id="text">
+                    <h2>Want some of our merch?</h2>
+                    <p>
+                        We are very appreciative of our fans here at Studio
+                        Ghibli! To celebrate the opening of our official merch
+                        store, here's an offer. Enter a number, and if its the
+                        same one we're thinking, you can get a 10% discount on
+                        your first order from our site!*
+                    </p>
+                </div>
+                <div id="formRandomNumber">
+                    <div>
+                        <label for="userInput">Enter your number: </label>
+                        <input
+                            type="number"
+                            name="number"
+                            id="userInput"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Guess!" id="guess" />
+                    </div>
+                </div>
+
+                <p id="randomNumberResult"></p>
+            </section>
+            <section id="shop">
+                <div id="cart">
+                    <h2>Your Cart</h2>
+
+                    <div id="totals">
+                        <div>
+                            <p>Current Total:</p>
+                            <p id="currentTotal">0</p>
+                        </div>
+                        <div>
+                            <p>Tax Rate:</p>
+                            <p>8.5%</p>
+                        </div>
+                        <div>
+                            <p>Shipping:</p>
+                            <p>$10</p>
+                        </div>
+                        <div>
+                            <p>Total:</p>
+                            <p id="overallTotal">0</p>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Check Out" id="cartSubmit" />
+                    <p id="checkOutError"></p>
+                    <p id="checkOutDisplay"></p>
+                </div>
+                <div id="products"></div>
+            </section>
+        </main>
+        <footer id="footer">
+            <section id="contact-us">
+                <p>Have any questions?</p>
+                <h2>Contact Us!</h2>
+                <form
+                    action="https://wp.zybooks.com/form-viewer.php"
+                    method="post"
+                >
+                    <div class="textboxes">
+                        <div>
+                            <label for="firstName">First Name:</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                id="firstName"
+                                autocomplete="name"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label for="lastName">Last Name:</label>
+                            <input
+                                type="text"
+                                name="lastName"
+                                id="lastName"
+                                autocomplete="name"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <fieldset>
+                        <legend>Contact Preference</legend>
+
+                        <div>
+                            <input
+                                type="radio"
+                                name="contact"
+                                id="phoneRadio"
+                            />
+                            <label for="phoneRadio">Phone</label>
+
+                            <input
+                                type="radio"
+                                name="contact"
+                                id="emailRadio"
+                            />
+                            <label for="emailRadio">Email</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="textboxes">
+                        <div>
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                autocomplete="email"
+                            />
+                        </div>
+                        <div>
+                            <label for="phone">Phone:</label>
+                            <input
+                                type="tel"
+                                name="tel"
+                                id="phone"
+                                autocomplete="tel"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="textboxes">
+                        <label for="textbox" id="textarea"
+                            >Your questions:</label
+                        >
+                        <textarea name="questions" id="textbox"></textarea>
+                    </div>
+
+                    <input type="submit" value="Subscribe" id="subscribe" />
+                    <p id="errorMessage"></p>
+                    <p id="userInfo"></p>
+                </form>
+            </section>
+
+            <div>
+                <small>Studio Ghibli - All Rights Reserved</small>
+            </div>
+        </footer>
+    </body>
+</html>
